@@ -5,7 +5,7 @@ pipeline {
             steps {
                 //sh 'python --version'
                 echo "hi file cjhgcgf"
-                sh "hostname"
+                sh 'echo "Hello World"'
             }
         }
     }
