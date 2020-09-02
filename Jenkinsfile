@@ -1,9 +1,9 @@
 pipeline {
-    agent any
+    agent { docker { image 'php' } }
     stages {
         stage('build') {
             steps {
-                echo "hi web hooks check1"
+                sh 'php --version'
             }
         }
     }
