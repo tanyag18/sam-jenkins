@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 //sh 'python --version'
-                echo "hi file"
+                echo "hi file c"
             }
         }
     }
