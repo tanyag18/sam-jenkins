@@ -5,8 +5,8 @@ pipeline {
             steps {
                 //sh 'python --version'
                 echo "hi file cjhgcgf"
-                //sh 'echo "Hello World"'
-                bat echo 'hii'
+                bat 'echo "Hello World"'
+                
             }
         }
     }
