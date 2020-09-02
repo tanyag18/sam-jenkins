@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                bat 'echo "testing app"'
+                bat 'echo "testing application"'
                 bat 'python --version' 
                 //bat 'python function\\test_calc.py'
 
