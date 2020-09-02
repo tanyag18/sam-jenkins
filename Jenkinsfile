@@ -1,29 +1,25 @@
 pipeline {
-    agent any//{ docker { image 'python:3.5.1' } }
+    agent any //{ docker { image 'python:3.5.1' } }
     stages {
         stage('test') {
             steps {
-                //sh 'python --version'
-                bat 'echo "testing app"'
-                
+                bat 'echo "testing app"'    
             }
         }
 
-        stage('build') {
-            steps {
-                //sh 'python --version'
-                bat 'echo "building package"'
-                bat 'sam package --template-file template.yaml --output-template-file deploy-calc.yaml --s3-bucket sam-calc-init --region ap-south-1'
+        // stage('build') {
+        //     steps {
+        //         bat 'echo "building package"'
+        //         bat 'sam package --template-file template.yaml --output-template-file deploy-calc.yaml --s3-bucket sam-jenkins-init --region us-east-1'
                 
-            }
-        }
-        stage('deploy') {
-            steps {
-                // sh 'python --version'
-                bat 'echo "deploying"'
-                bat 'sam deploy --template-file deploy-calc.yaml --stack-name sam-test-stack --no-confirm-changeset --capabilities CAPABILITY_IAM --region ap-south-1'
+        //     }
+        // }
+        // stage('deploy') {
+        //     steps {
+        //         bat 'echo "deploying"'
+        //         bat 'sam deploy --template-file deploy-calc.yaml --stack-name sam-jenkins-stack --no-confirm-changeset --capabilities CAPABILITY_IAM --region us-east-1'
                 
-            }
-        }
+        //     }
+        // }
     }
 }
