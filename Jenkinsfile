@@ -4,7 +4,7 @@ pipeline {
         stage('test') {
             steps {
                 bat 'echo "testing app"' 
-                bat 'python function/test_calc.py'   
+                bat 'python function\\test_calc.py'   
             }
         }
 
