@@ -1,9 +1,10 @@
 pipeline {
-    agent { docker { image 'python:3.5.1' } }
+    agent { docker { image 'python:3.8' } }
     stages {
         stage('test') {
             steps {
-                bat 'echo "testing app"' 
+                bat 'echo "testing app"'
+                bat 'python --version' 
                 //bat 'python function\\test_calc.py'
 
             }
