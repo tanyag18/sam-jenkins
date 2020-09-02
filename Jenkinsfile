@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo "hi web hooks check1"
+                echo "hi web hooks check"
             }
         }
     }
